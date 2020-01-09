@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Chater</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="welcome_message" translatable="false">Welcome</string>
+    <string name="failed_login_message" translatable="false">Failed to login!!!</string>
+    <string name="send" translatable="false">Send</string>
+
+    <string name="Friends" translatable="false">Friends</string>
+    <string name="Add_Friends" translatable="false">Add_Friends</string>
+    <string name="Profile" translatable="false">Profile</string>
+    <string name="Settings" translatable="false">Settings</string>
+    <string name="Home" translatable="false">Home</string>
+
+    <string name="Name" translatable="false">Name</string>
+    <string name="Email" translatable="false">Email</string>
+    <string name="Password" translatable="false">Password</string>
+    <string name="Login" translatable="false">Login</string>
+    <string name="Logout" translatable="false">Logout</string>
+    <string name="Update" translatable="false">Update</string>
+    <string name="Image" translatable="false">Image</string>
+    <string name="Message" translatable="false">Message</string>
+    <string name="Delete" translatable="false">Delete</string>
+    <string name="Language" translatable="false">Language</string>
+
+    <string name="Phone_number" translatable="false">Phone number</string>
+    <string name="Provider" translatable="false">Provider</string>
+
+    <string name="Get_karma_points" translatable="false">Get karma points</string>
+    <string name="You_get_karma_points" translatable="false">You get karma points</string>
+    <string name="Add_not_loaded" translatable="false">Ad not loaded</string>
+
+    <string name="User_added_to_friends" translatable="false">User added to friends</string>
+    <string name="Failed_data_base_request" translatable="false">Error occur trying to connect to data base</string>
+    <string name="Email_example" translatable="false">example@email.com</string>
+
+
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+</resources>

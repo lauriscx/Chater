@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:id="@+id/chat_room_layout">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_receiver"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/message_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image_receiver"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:background="@drawable/sends_message"
+        android:text="@string/Message"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_sender"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/profile_vector" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:layout_marginRight="5dp"
+        android:id="@+id/message_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/image_sender"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:background="@drawable/receive_message"
+        android:text="@string/Message"
+        />
+
+</RelativeLayout>

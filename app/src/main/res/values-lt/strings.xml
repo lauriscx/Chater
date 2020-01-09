@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chater</string>
+    <string name="navigation_drawer_open" translatable="false">Atidaryti navigacija</string>
+    <string name="navigation_drawer_close" translatable="false">Uždaryti navigacija</string>
+    <string name="welcome_message" translatable="false">Sveiki</string>
+    <string name="failed_login_message" translatable="false">Nepavyko prisijungti!!!</string>
+    <string name="send" translatable="false">Siųsti</string>
+
+    <string name="Friends" translatable="false">Draugai</string>
+    <string name="Add_Friends" translatable="false">Pridėti Draugus</string>
+    <string name="Profile" translatable="false">Profilis</string>
+    <string name="Settings" translatable="false">Nustatymai</string>
+    <string name="Home" translatable="false">Namai</string>
+
+    <string name="Name" translatable="false">Vardas</string>
+    <string name="Email" translatable="false">El. paštas</string>
+    <string name="Password" translatable="false">Salptažodis</string>
+    <string name="Login" translatable="false">Prisijungti</string>
+    <string name="Logout" translatable="false">Atsijungti</string>
+    <string name="Update" translatable="false">Atnaujinti</string>
+    <string name="Image" translatable="false">Nuotrauka</string>
+    <string name="Message" translatable="false">Žinute</string>
+    <string name="Delete" translatable="false">Ištrinti</string>
+    <string name="Language" translatable="false">Kalba</string>
+
+    <string name="Phone_number" translatable="false">Telefonas</string>
+    <string name="Provider" translatable="false">Tiekėjas</string>
+    <string name="Get_karma_points" translatable="false">Gaukite karmos taškų</string>
+    <string name="You_get_karma_points" translatable="false">Jus gavote karmos taškų</string>
+    <string name="Add_not_loaded" translatable="false">Reklama dar nepasiekiama</string>
+
+    <string name="User_added_to_friends" translatable="false">Vartotojas pridėtas į draugus</string>
+    <string name="Failed_data_base_request" translatable="false">Įvyko klaida bandant prisijungti prie duomenų bazės</string>
+    <string name="Email_example" translatable="false">example@email.com</string>
+</resources>

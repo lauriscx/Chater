@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "769172481515",
+    "firebase_url": "https://chater-6907a.firebaseio.com",
+    "project_id": "chater-6907a",
+    "storage_bucket": "chater-6907a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769172481515:android:a43ee1cde759996b2525ae",
+        "android_client_info": {
+          "package_name": "com.gym.chater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769172481515-ucflv76d72fsl8i90qen3fjhualfspq9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gym.chater",
+            "certificate_hash": "018415e64749521b268db7934a640346f8d69b7e"
+          }
+        },
+        {
+          "client_id": "769172481515-63o1d3btu2bdnt023aotss3rp7h9jhpt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDANwWj_hv_AH4HRN3MWFqPraP5icqq6Dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769172481515-63o1d3btu2bdnt023aotss3rp7h9jhpt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
