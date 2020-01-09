@@ -10,6 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gym.chater.Data.FragmentManager;
@@ -17,6 +20,7 @@ import com.gym.chater.Data.User;
 import com.gym.chater.Fragments.ChatFragment;
 import com.gym.chater.R;
 import com.gym.chater.ViewModel.Friends;
+import com.gym.chater.ViewModel.FriendsViewModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -29,10 +33,14 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
     private final RecyclerView recycler;
     private Context context;
 
+    private FriendsViewModel model;
+
     public FriendsAdapter(Context context, final RecyclerView recycler) {
         this.recycler = recycler;
         friends = Friends.getFriends(recycler, context);
         this.context = context;
+
+        model = ViewModelProviders.of((FragmentActivity)context).get(FriendsViewModel.class);
     }
 
     @NonNull
