@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.gym.chater.R;
+import com.gym.chater.Settings;
 import com.gym.chater.ViewModel.Login;
 import com.squareup.picasso.Picasso;
 
@@ -25,6 +26,7 @@ public class SettingsFragment extends Fragment {
     private ImageView Image;
     private Button LT;
     private Button EN;
+    private Button SoundNutton;
     private static Locale language;
     private static Context contex;
 
@@ -41,6 +43,7 @@ public class SettingsFragment extends Fragment {
         Image   = view.findViewById(R.id.Profile_Image);
         LT    = view.findViewById(R.id.LT);
         EN   = view.findViewById(R.id.EN);
+        SoundNutton = view.findViewById(R.id.SoundButton);
         if(!Login.isLoged()) {
             Login.SingIn();
         }
@@ -57,6 +60,19 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 setLanguage("en");
+            }
+        });
+
+        SoundNutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Settings.isSoundEffects()){
+                    SoundNutton.setText(contex.getString(R.string.Off));
+                    Settings.setSoundEffects(false);
+                } else {
+                    SoundNutton.setText(contex.getString(R.string.On));
+                    Settings.setSoundEffects(true);
+                }
             }
         });
 

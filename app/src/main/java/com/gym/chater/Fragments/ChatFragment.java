@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.emoji.widget.EmojiEditText;
@@ -21,6 +22,7 @@ import com.gym.chater.Adapters.ChatAdapter;
 import com.gym.chater.Data.Session;
 import com.gym.chater.Data.User;
 import com.gym.chater.R;
+import com.gym.chater.Settings;
 import com.gym.chater.ViewModel.Login;
 import com.gym.chater.ViewModel.Mailer;
 import com.squareup.picasso.Picasso;
@@ -72,7 +74,9 @@ public class ChatFragment extends Fragment {
         sendbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.start();
+                if(Settings.isSoundEffects()){
+                    player.start();
+                }
                 mailer.sendMessage(messageText.getText().toString());
                 messageText.setText("");
             }

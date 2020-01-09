@@ -24,6 +24,10 @@
     <string name="Delete" translatable="false">Ištrinti</string>
     <string name="Language" translatable="false">Kalba</string>
 
+    <string name="Sound" translatable="false">Garsas</string>
+    <string name="On" translatable="false">Įjungtas</string>
+    <string name="Off" translatable="false">Išjungtas</string>
+
     <string name="Phone_number" translatable="false">Telefonas</string>
     <string name="Provider" translatable="false">Tiekėjas</string>
     <string name="Get_karma_points" translatable="false">Gaukite karmos taškų</string>

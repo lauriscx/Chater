@@ -26,6 +26,7 @@ import com.gym.chater.Fragments.ProfileFragment;
 import com.gym.chater.Fragments.SettingsFragment;
 import com.gym.chater.Fragments.UsersFragment;
 import com.gym.chater.R;
+import com.gym.chater.Settings;
 import com.gym.chater.ViewModel.Login;
 import com.squareup.picasso.Picasso;
 
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView UserName;
     private TextView UserEmail;
     private ImageView UserImage;
+    private boolean ToHome;
+    private HomeFragment home;
+    private FriendsFragment friends;
+    private MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Login.setActivity(this);
         }
         FragmentManager.setManager(getSupportFragmentManager());
+        home = new HomeFragment();
+        friends = new FriendsFragment();
+
+        player = MediaPlayer.create(getBaseContext(), R.raw.menu_sound);
     }
 
     @Override //button back clicked close navigation first not activity.
@@ -77,41 +86,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if(ToHome) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, home).commit();//Make fragment_profile.xml layout displayed in fragment_container
+            } else {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, friends).commit();//Make fragment_profile.xml layout displayed in fragment_container
+            }
         }
     }
 
     @Override//On item clicked in nav menu function occurs
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        final MediaPlayer player = MediaPlayer.create(getBaseContext(), R.raw.menu_sound);
+        ToHome = true;
 
         switch (menuItem.getItemId()) {
             case R.id.menu_item_profile:
-                player.start();
+                makeSound();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();//Make fragment_profile.xml layout displayed in fragment_container
                 break;
             case R.id.menu_item_home:
-                player.start();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();//Make fragment_profile.xml layout displayed in fragment_container
+                makeSound();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, home).commit();//Make fragment_profile.xml layout displayed in fragment_container
                 break;
             case R.id.menu_item_friends:
-                player.start();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendsFragment()).commit();//Make fragment_profile.xml layout displayed in fragment_container
+                makeSound();
+                ToHome = false;
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, friends).commit();//Make fragment_profile.xml layout displayed in fragment_container
                 break;
             case R.id.menu_item_add_friends:
-                player.start();
+                makeSound();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UsersFragment()).commit();//Make fragment_profile.xml layout displayed in fragment_container
                 break;
             case R.id.menu_item_logout:
-                player.start();
+                makeSound();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LogoutFragment()).commit();//Make fragment_profile.xml layout displayed in fragment_container
                 break;
             case R.id.menu_item_settings:
-                player.start();
+                makeSound();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment(getBaseContext())).commit();//Make fragment_profile.xml layout displayed in fragment_container
                 break;
             default:
-                player.start();
+                makeSound();
                 Toast.makeText(this, "Unknown command", Toast.LENGTH_LONG).show();
                 break;
         }
@@ -120,6 +134,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    private void makeSound(){
+        if(Settings.isSoundEffects()) {
+            player.start();
+        }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -130,6 +149,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         UserEmail.setText(Login.getFireBaseUser().getEmail());
         Picasso.get().load(Login.getFireBaseUser().getPhotoUrl()).into(UserImage);
     }
-
 
 }

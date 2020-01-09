@@ -23,6 +23,10 @@
     <string name="Delete" translatable="false">Delete</string>
     <string name="Language" translatable="false">Language</string>
 
+    <string name="Sound" translatable="false">Sound</string>
+    <string name="On" translatable="false">On</string>
+    <string name="Off" translatable="false">Off</string>
+
     <string name="Phone_number" translatable="false">Phone number</string>
     <string name="Provider" translatable="false">Provider</string>
 
