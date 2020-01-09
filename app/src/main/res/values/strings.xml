@@ -26,6 +26,9 @@
     <string name="Sound" translatable="false">Sound</string>
     <string name="On" translatable="false">On</string>
     <string name="Off" translatable="false">Off</string>
+    <string name="KarmaPoints" translatable="false">Karma points</string>
+    <string name="KarmaPoint" translatable="false">get karma point</string>
+
 
     <string name="Phone_number" translatable="false">Phone number</string>
     <string name="Provider" translatable="false">Provider</string>

@@ -5,18 +5,75 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark">
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/background_header"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Home_Profile_Image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@mipmap/ic_launcher_round"
+            app:civ_border_color="#FFFFFF"
+            android:layout_centerHorizontal="true"
+
+            android:layout_alignParentTop="true"
+            app:civ_border_width="1dp" />
+        <TextView
+            android:id="@+id/home_karma_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Get_karma_points"
+            android:textSize="25sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+
+            />
+        <TextView
+            android:id="@+id/karma_points_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="45"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+
+            />
+    </RelativeLayout>
+
+
+
     <Button
         android:id="@+id/test_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test Ad"
-        android:layout_alignParentRight="true"/>
+        android:text="@string/KarmaPoint"
+        android:background="@drawable/circle_shape"
+        android:height="100dp"
+        android:width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"/>
     <Button
         android:id="@+id/test_reward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Get_karma_points"
-        android:layout_alignParentLeft="true"/>
+        android:background="@drawable/circle_shape"
+        android:height="100dp"
+        android:width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/banner"

@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,6 +19,7 @@ import com.gym.chater.AdMob.BannerListener;
 import com.gym.chater.AdMob.FullScreenListener;
 import com.gym.chater.AdMob.RewardVideoListener;
 import com.gym.chater.R;
+import com.gym.chater.Repository.KarmaPoints;
 import com.gym.chater.ViewModel.Login;
 
 import com.google.android.gms.ads.AdRequest;
@@ -24,15 +27,18 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.squareup.picasso.Picasso;
 
 public class HomeFragment extends Fragment {
     private AdView banner;
+    private TextView karmaPoints;
     private InterstitialAd fullScreenAd;
     private RewardedVideoAd rewardVideoAd;
     private Button fullScreenButton;
     private Button rewardButton;
     private Context context;
     private MediaPlayer player;
+    private ImageView image;
 
     @Nullable
     @Override
@@ -44,10 +50,20 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         player = MediaPlayer.create(context, R.raw.menu_sound);
+        image = view.findViewById(R.id.Home_Profile_Image);
+
+        try {
+            Picasso.get().load(Login.getFireBaseUser().getPhotoUrl()).into(image);
+        }catch (Exception e){}
+        karmaPoints = view.findViewById(R.id.karma_points_value);
+
+        karmaPoints.setText(String.valueOf(KarmaPoints.getkarmaPoints()));
 
         setmRewardedVideoAd(view);
         setFullScreenAdSetUp(view);
         setBanner(view);
+
+
 
         return view;
     }

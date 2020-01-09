@@ -24,6 +24,9 @@
     <string name="Delete" translatable="false">Delete</string>
     <string name="Language" translatable="false">Language</string>
 
+    <string name="KarmaPoints" translatable="false">Karma points</string>
+
+    <string name="KarmaPoint" translatable="false">get karma point</string>
     <string name="Sound" translatable="false">Sound</string>
     <string name="On" translatable="false">On</string>
     <string name="Off" translatable="false">Off</string>
