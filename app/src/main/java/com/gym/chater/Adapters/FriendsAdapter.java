@@ -1,7 +1,6 @@
 package com.gym.chater.Adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +53,7 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
         holder.add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager.Manager.beginTransaction().replace(R.id.fragment_container, new ChatFragment(user, context)).commit();
+                FragmentManager.getManager().beginTransaction().replace(R.id.fragment_container, new ChatFragment(user, context)).commit();
             }
         });
 

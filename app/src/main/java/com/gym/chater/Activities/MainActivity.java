@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.emoji.text.EmojiCompat;
-import androidx.emoji.text.FontRequestEmojiCompatConfig;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -71,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             Login.setActivity(this);
         }
-        FragmentManager.Manager = getSupportFragmentManager();
+        FragmentManager.setManager(getSupportFragmentManager());
     }
 
     @Override //button back clicked close navigation first not activity.
